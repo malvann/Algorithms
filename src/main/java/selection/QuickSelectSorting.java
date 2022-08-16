@@ -1,3 +1,5 @@
+package selection;
+
 import java.util.Random;
 
 public class QuickSelectSorting {

@@ -5,8 +5,10 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.List;
 
-public class Solution {
+public class Util {
+    public static void main(String[] args) {
 
+    }
 
 
     static class TestUtils {
@@ -17,7 +19,7 @@ public class Solution {
         }
 
         public static List<String> readFromFile(String file) throws IOException {
-            try(BufferedReader bufferedReader = new BufferedReader(new FileReader(file))){
+            try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
                 return bufferedReader.lines().toList();
             }
         }

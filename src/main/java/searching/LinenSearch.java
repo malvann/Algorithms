@@ -1,3 +1,5 @@
+package searching;
+
 public class LinenSearch {
 
     public static void main(String[] args) {

@@ -1,3 +1,5 @@
+package recursion;
+
 public class EuclideanAlgorithm {
     public static void main(String[] args) {
         System.out.println(gcp(24, 9));

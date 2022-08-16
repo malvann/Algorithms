@@ -1,3 +1,5 @@
+package searching;
+
 public class BinarySearch {
     public static void main(String[] args) {
         int[] container = new int[]{1, 3, 4, 7, 9, 10, 43, 44, 50};
