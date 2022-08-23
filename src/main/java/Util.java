@@ -7,9 +7,7 @@ import java.util.List;
 
 public class Util {
     public static void main(String[] args) {
-
     }
-
 
     static class TestUtils {
         public static List<String> readFromUrl(String source) throws IOException {
