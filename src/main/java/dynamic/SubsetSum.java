@@ -33,7 +33,7 @@ public class SubsetSum {
             while (n > 0 || s > 0) {
                 if (solution[n][s] == solution[n - 1][s]) n--;
                 else {
-                    result.append(nums[n - 1] + ", ");
+                    result.append(nums[n - 1]).append(", ");
                     s -= nums[n - 1];
                 }
             }
