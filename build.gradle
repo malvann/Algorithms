@@ -2,18 +2,19 @@ plugins {
     id 'java'
 }
 
-group 'org.example'
-version '1.0-SNAPSHOT'
-
-repositories {
-    mavenCentral()
-}
-
-subprojects {
+allprojects {
     apply plugin: 'java'
 
     group 'org.example'
     version '1.0-SNAPSHOT'
+
+    repositories {
+        mavenCentral()
+    }
+
+    test {
+        useJUnitPlatform()
+    }
 
     configurations {
         compileOnly {
@@ -21,15 +22,12 @@ subprojects {
         }
     }
 
-    repositories {
-        mavenCentral()
-    }
-
     dependencies {
         implementation('com.google.guava:guava:32.0.0-android')
         compileOnly 'org.projectlombok:lombok:1.18.24'
         annotationProcessor 'org.projectlombok:lombok:1.18.24'
-        testImplementation 'org.springframework.boot:spring-boot-starter-test:2.6.7'
+        testImplementation 'org.junit.jupiter:junit-jupiter:5.7.1'
+        testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     }
 
     configurations {
