@@ -16,7 +16,7 @@ public class DepthFirstSearchRecursion {
     }
 
     private void dfsHelper(Node root) {
-        for (Node node : root.getChildren()) {
+        for (Node node : root.getNextNodes()) {
             if (node.isVisited()) return;
 
             node.setVisited(true);

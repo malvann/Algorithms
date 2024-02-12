@@ -16,7 +16,7 @@ public class BreadthFirstSearch {
         while (!queue.isEmpty()) {
             poll = queue.poll();
             poll.setVisited(true);
-            queue.addAll(poll.getChildren());
+            queue.addAll(poll.getNextNodes());
             System.out.println(poll.getName());
         }
     }

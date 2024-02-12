@@ -26,7 +26,7 @@ public class DepthFirstSearch {
         while (!stack.isEmpty()) {
             pop = stack.pop();
 
-            for (Node node : pop.getChildren()) {
+            for (Node node : pop.getNextNodes()) {
                 if (node.isVisited()) continue;
                 node.setVisited(true);
                 stack.add(node);

@@ -19,7 +19,7 @@ public class TopologicalOrdering {
     private void crawl(Node node) {
         node.setVisited(true);
 
-        for (Node n : node.getChildren()) {
+        for (Node n : node.getNextNodes()) {
             if (n.isVisited()) continue;
             crawl(n);
         }
