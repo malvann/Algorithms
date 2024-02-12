@@ -14,7 +14,9 @@ public class CycleDetection {
     }
 
     private boolean hasCycle(DetectionNode node) {
-        node.setIsBeingVisited(true);
+        node.setAsBeingVisited();
+        node.setAsVisited();
+
         for (DetectionNode n : node.getCandidates()) {
             if (n.getIsBeingVisited()) return true;
             if (!n.getIsVisited()) {
@@ -22,7 +24,6 @@ public class CycleDetection {
                 hasCycle(n);
             }
         }
-        node.setAsVisited();
         return false;
     }
 }

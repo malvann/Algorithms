@@ -21,8 +21,8 @@ public class DetectionNode {
         return this.isVisited;
     }
 
-    public void setIsBeingVisited(boolean isVisited) {
-        this.isBeingVisited = isVisited;
+    public void setAsBeingVisited() {
+        this.isBeingVisited = true;
     }
 
     public boolean getIsBeingVisited() {
